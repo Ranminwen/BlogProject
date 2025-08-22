@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人ブログ</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+            <div class="inner">
+                <div class="logo">
+                    <a href=""><img th:src="@{/images/logo.png}" alt=""></a>
+                </div>
+                <ul class="list">
+                    <li class="list__item"><a href="">ログイン</a></li>
+                    <li class="list__item"><a href="">ブログリスト</a></li>
+                </ul>
+            </div>
+    </header>
+    <main>
+        <div class="main-inner">
+            <section class="register-section">
+                <h2>新規登録</h2>
+                <form th:action="@{/admin/register/process}" method="post">
+                    <div class="register-section-details">
+                        <div class="register-section-details_flex">
+                            <label class="register_pass" for="name">名前</label>
+                            <input type="text" name="name" placeholder="name" id="name">
+                        </div>
+                        <div class="register-section-details_flex">
+                            <label class="register_pass" for="email">メールアドレス</label>
+                            <input type="text" name="accountEmail" placeholder="email" id="email">
+                        </div>
+                        <div class="register-section-details_flex">
+                            <label class="register_pass" for="email">パスワード</label>
+                            <input type="text" name="password" placeholder="password" id="password">
+                        </div>
+                    </div>
+                    <div class="register-section-details_flex register-position">
+                        <button class="register">登録</button>
+                        <button class="back-btn" onclick="history.back();" type="button">戻る</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <small>&copy;2025 RAN individual_blog exercise</small>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

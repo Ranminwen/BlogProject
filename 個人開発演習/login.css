@@ -1,0 +1,65 @@
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.form_contents{
+    background-color:gainsboro;
+    /*罫線を引く*/
+    border: 5px solid gainsboro;
+    /*幅の設定*/
+    width: 500px;
+    border-radius: 8px;
+    /*ブロックを真ん中に持ってくる*/
+    margin: 0 auto;
+  
+}
+.login{
+    /*幅の設定*/
+    width: 350px;
+    /*画面の真ん中に*/
+    margin: 0 auto;
+}
+h2{
+    /*ブログ登録という文字を真ん中に持ってくる*/
+    text-align: center;  
+} 
+.login_control{
+    /*画面の真ん中に*/
+    margin: 0 auto;
+    /*下に余白を入れて要素を同士を離す*/
+    margin-bottom: 15px;
+}
+.control-position{
+    /*ボタンを真ん中に持ってくる*/
+    text-align: center;
+}
+.login_control_pass{
+    display: inline-block;
+    width: 120px;
+}
+.new_registration{
+/*リンクを右に持ってくる*/
+text-align: right;
+ /*右に余白を入れて*/ 
+margin-right:15px;
+}
+/*ボタンの装飾*/
+.login_btn{
+    width: 150px;
+    padding: 6px 0;
+    background-color:antiquewhite;
+    color: rgb(119, 116, 116);
+    margin-top: 20px;
+    border: 1px solid transparent;
+    /* 角を丸いにする */
+    border-radius: 2px;
+}
+
+.registration_link{
+    font-size: small;
+    color: rgb(151, 151, 209);
+}
+

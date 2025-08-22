@@ -1,0 +1,36 @@
+/*画面の共通部分*/
+html,body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color:gainsboro;
+    padding: 1px;
+    height: 80px;
+}
+footer{
+ margin: 0 auto;
+}
+div{
+    text-align: center; 
+}
+
+.list{
+    display: flex;
+    flex-direction:row;
+}
+.list__item{
+    margin-right:20px;
+}
+h2{
+    /*ブログ登録という文字を真ん中に持ってくる*/
+    text-align: center;  
+} 
+li{
+    list-style: none;
+}

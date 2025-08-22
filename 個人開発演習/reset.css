@@ -1,0 +1,74 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color:gainsboro;
+    padding: 1px;
+    height: 80px;
+}
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.main-inner{
+   /*画面の真ん中に*/
+    margin: 0 auto; 
+}
+.register-section{
+    background-color:gainsboro;
+    /*罫線を引く*/
+    border: 5px solid gainsboro;
+    /*幅の設定*/
+    width: 500px;
+    border-radius: 8px;
+    /*画面を真ん中に持ってくる*/
+    margin: 0 auto;
+}
+.register-section-details{
+    /*幅の設定*/
+    width: 350px;
+    /*画面の真ん中に*/
+    margin: 0 auto;
+}
+.register-section-details_flex{
+   margin-top: 15px;
+
+}
+.register_pass{
+    display: inline-block;
+    width: 120px;
+}
+.register-position{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.register{
+    width: 100px;
+    padding: 6px 0;
+    background-color:antiquewhite;
+    color: rgb(119, 116, 116);
+    margin-top: 20px;
+    border: 1px solid transparent;
+    /* 角を丸いにする */
+    border-radius: 2px;
+
+}
+.back-btn{
+     width: 100px;
+    padding: 6px 0;
+    background-color:antiquewhite;
+    color: rgb(119, 116, 116);
+    margin-top: 20px;
+    border: 1px solid transparent;
+    /* 角を丸いにする */
+    border-radius: 2px;
+}
