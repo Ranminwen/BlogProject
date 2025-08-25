@@ -1,31 +1,19 @@
-html,body{
-    height: 100%;
-    margin: 0;
-}
-body{
-    background-color:antiquewhite;
-    display: flex;
-    flex-direction: column;
-}
-header{
-    background-color:gainsboro;
-    padding: 1px;
-    height: 80px;
-}
 main{
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center; 
+      
 }
 .main-inner{
    /*画面の真ん中に*/
     margin: 0 auto; 
 }
 .register-section{
-    background-color:gainsboro;
     /*罫線を引く*/
-    border: 5px solid gainsboro;
+    border: 3px solid gainsboro;
+    /*ペイジーに浮いている見えるように*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
     /*幅の設定*/
     width: 500px;
     border-radius: 8px;
@@ -40,11 +28,12 @@ main{
 }
 .register-section-details_flex{
    margin-top: 15px;
-
 }
 .register_pass{
     display: inline-block;
     width: 120px;
+    color: rgb(238, 182, 97); 
+    text-align: left;
 }
 .register-position{
 margin-top: 20px;
@@ -63,7 +52,7 @@ margin-bottom: 20px;
 
 }
 .back-btn{
-     width: 100px;
+    width: 100px;
     padding: 6px 0;
     background-color:antiquewhite;
     color: rgb(119, 116, 116);

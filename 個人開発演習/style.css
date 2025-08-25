@@ -1,21 +1,77 @@
-/*画面の共通部分*/
+/*書各画面の共通部分*/
 html,body{
+    /*画面のサイズをウェブサイトのサイズに等しい*/
     height: 100%;
     margin: 0;
+    background-image: linear-gradient(#ffffff,antiquewhite);
 }
 body{
-    background-color:antiquewhite;
+    /*各要素を縦にする*/
     display: flex;
     flex-direction: column;
+    padding-top: 5rem;
 }
 header{
-    background-color:gainsboro;
-    padding: 1px;
-    height: 80px;
+    background-image:url('img/メニューline.png');
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /*画面のサイズをウェブサイトのサイズに等しい*/
+    width: 100%;
+    height: 4.5rem; 
+    /*画面の一番上にする もし、1000は足りない場合、より大きい数字に変換できる*/
+    z-index: 1000;
+    /*ペイジーに浮いている見えるように*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+ 
+}
+main{
+    /*もし、mainの要素が多い場合、下に見える*/
+    overflow: auto;
+    background-image:url('');
+    background-size: cover;   
 }
 footer{
- margin: 0 auto;
+    /*画面の真ん中にする*/
+    margin: 0 auto;
 }
+
+/*ーーーheader内部のデザインーーー*/
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    padding-top: 0rem;
+}
+.inner{
+ display: flex;
+ flex-direction: row;
+}
+/*logoとListの幅 */
+.logo{
+ width: 5rem;
+} 
+.list{
+ width: auto;
+ margin-left: auto;
+}
+/*logo内の画像の大きさ*/
+.logo img{
+   width: 4.5rem; 
+   height: 4.5rem;
+}
+.list__item{
+    height: 2rem;
+    margin-right: 2rem;
+    align-content: center; 
+    background-color:rgb(225, 180, 219);
+    border: 3px dashed rgb(249, 248, 249); 
+    border-radius: 10px; 
+}
+
+/*ーーーすべての文字のデザインーーー*/
+
 div{
     text-align: center; 
 }
@@ -24,13 +80,14 @@ div{
     display: flex;
     flex-direction:row;
 }
-.list__item{
-    margin-right:20px;
-}
+
 h2{
-    /*ブログ登録という文字を真ん中に持ってくる*/
-    text-align: center;  
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(238, 182, 97);
+    /*文字を真ん中に持ってくる*/
+    text-align: center;    
 } 
 li{
     list-style: none;
+    font-family:'Courier New', Courier, monospace;
 }

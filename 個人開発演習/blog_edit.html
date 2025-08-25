@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ編集</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="menu">
+        <div class="inner">
+            <div class="logo">
+                <a href=""><img src="img/blog.png" alt=""></a>
+            </div>
+            <ul class="list"><!-- account名前を表示したい -->
+                <li class="list__item" text="accountName"></li>
+                <li class="list__item"><a href="">ブログリスト</a></li>
+                <li class="list__item"><a href="">ログアウト</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="main-inner">
+            <section class="register-section">
+                <h2>ブログ編集中</h2>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <div class="register-section-details">
+                        <div class="register-section-details_flex">
+                            <div>タイトル</div>
+                            <input type="text" name="blogTitle" value="">
+                        </div>
+                        <div class="register-section-details_flex">
+                            <div>カテゴリ</div>
+                            <select name="categoryName">
+                                <option value=""></option>
+                                <option value="中国料理" selected="">中国料理</option>
+                                <option value="イタリア料理" selected="">イタリア料理</option>
+                                <option value="日本料理" selected="">日本料理</option>
+                                <!-- 時間がある場合、ユーザーがカテゴリを追加できるように挑戦してみたいと考えています。 -->
+                            </select>
+                        </div>
+                        <div class="register-section-details_flex">
+                            <div>ブログの写真</div> 
+                            <input type="file" name="blogImage">
+                        </div>
+                        <div class="register-section-details_flex">
+                            <div>ブログの内容</div>
+                            <textarea name="article" text="" placeholder="今日は何を作りましたか…"></textarea>
+                        </div>
+                    </div>
+                    <div class="register-section-details_flex">
+                        <button class="register">更新</button>
+                        <button class="back-btn" onclick="history.back()" type="button">戻る</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div>
+            <small>&copy;2025 RAN individual_blog exercise</small>
+        </div>
+    </footer>
+</body>
+
+</html>

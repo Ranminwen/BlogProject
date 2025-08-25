@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="menu">
+        <div class="inner">
+            <div class="logo">
+                <a href=""><img src="img/blog.png" alt=""></a>
+            </div>
+            <ul class="list">
+                <!-- account名前を表示したい -->
+                <li class="list__item"><a href=""></a></li>
+                <li class="list__item"><a href="">ブログリスト</a></li>
+                <li class="list__item"><a href="">ログアウト</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- 個人紹介 -->
+        <section class="profile">
+            <div class="profile-info">
+                <h1>RAN</h1>
+                <p>料理大好き</p>
+                <div class="social">
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com" target="_blank">Ins</a>
+                </div>
+            </div>
+        </section>
+        <article>
+            <!-- ブログリスト -->
+            <h2>ブログ一覧</h2>
+            <section class="register-item">
+                <div>
+                    <a href="blog_register.html"> ブログ追加</a>
+                </div>
+
+            </section>
+            <section class="blog-list">
+                <!-- すべてのブログの表示 -->
+                <ul class="blog">
+                    <li>
+                        <div class="article-content">
+                            <!-- タイトル -->
+                            <a href=""></a>
+                            <!-- ブログの写真     ＊写真リンクの上書き！-->
+                            <img src="/image/logo.png" alt="">
+                            <div class="blog_time"></div>
+                            <!-- ブログ投稿内容 -->
+                            <p></p><br>
+                            <!-- ブログのカテゴリ -->
+                            <p></p>
+                             <!-- ＊ブログをある場合 それぞれのブログに一つずいれたい！-->
+                            <div class="">
+                                <button class="deletion-btn">編集</button>
+                                <!-- ＊onclick 削除の書き方を確認！-->
+                                <button class="deletion-btn" onclick="" type="button">削除</button>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+    </main>
+    <footer>
+        <div>
+            <small>&copy;2025 RAN individual_blog exercise</small>
+        </div>
+    </footer>
+</body>
+
+</html>
