@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <link rel="stylesheet" th:href="@{/login.css}">
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+    <header class="menu">
+        <div class="inner">
+             <div class="logo">
+                <a href=""><img th:src="@{/img/blog.png}" alt=""></a>
+            </div>
+                 <ul class="list">
+                    <li class="list__item"><a href="">ログイン</a></li>
+                </ul>
+        </div>
+    </header>
+    <main>
+      <section class="form_contents">
+        <form th:action="@{/account/login/process}" method="post" class="login">
+            <h2>ログイン</h2>
+            <div class="login_control">
+                <label class="login_control_pass" for="email">メールアドレス</label>
+                <input type="text" name="accountEmail" id="email" placeholder="email" >
+            </div>
+             <div class="login_control">
+                <label class="login_control_pass" for="password">パスワード</label>
+                <input type="password" name="password" id="password" placeholder="password" >
+            </div>
+             <div class="login_control control-position">
+                <button class="login_btn" id="login">ログイン</button>
+            </div>
+        </form>
+            <div class="login_control new_registration">
+                <a class="registration_link" href="">新規登録</a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div>
+            <small>&copy;2025 RAN individual_blog exercise</small>
+        </div>
+    </footer>
+
+</body>
+
+</html>

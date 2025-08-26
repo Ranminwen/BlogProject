@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人ブログを作る</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 
 <body>
@@ -25,11 +25,11 @@
         <div class="main-inner">
             <section class="register-section">
                 <h2>新規登録</h2>
-                <form th:action="@{/admin/register/process}" method="post">
+                <form th:action="@{/account/register/process}" method="post">
                     <div class="register-section-details">
                         <div class="register-section-details_flex">
                             <label class="register_pass" for="name">名前</label>
-                            <input type="text" name="name" placeholder="name" id="name">
+                            <input type="text" name="accountName" placeholder="name" id="name">
                         </div>
                         <div class="register-section-details_flex">
                             <label class="register_pass" for="email">メールアドレス</label>
