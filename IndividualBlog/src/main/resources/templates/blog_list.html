@@ -2,75 +2,77 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Blog</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>My Blog</title>
+	<link rel="stylesheet" th:href="@{/style.css}">
 </head>
 
 <body>
-      <header class="menu">
-        <div class="inner">
-            <div class="logo">
-                <a href=""><img src="img/blog.png" alt=""></a>
-            </div>
-            <ul class="list">
-                <!-- account名前を表示したい -->
-                <li class="list__item" text="accountName"></li>
-                <li class="list__item"><a href="">ブログリスト</a></li>
-                <li class="list__item"><a href="">ログアウト</a></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-        <div class="blog-list-inner">
-            <!-- 個人紹介 -->
-            <section class="profile">
-                <div class="profile-info">
-                    <div class="welcome">
-                        <p text="accountName"></p>
-                        <p>Welcome</p>
-                    </div>
-                    <div class="social">
-                        <a href="https://twitter.com" target="_blank">Twitter</a>
-                        <a href="https://www.instagram.com" target="_blank">Ins</a>
-                    </div>
-                </div>
-            </section>
-            <article>
-                <!-- ブログリスト -->
-                <h2>ブログ一覧</h2>
-                <section class="register-item">
-                    <div>
-                        <a href="blog_register.html"> 追加</a>
-                    </div>
+	<header class="menu">
+		<div class="inner">
+			<div class="logo">
+				<a href=""><img th:src="@{/img/blog.png}" alt=""></a>
+			</div>
+			<ul class="list">
+				<!-- account名前を表示したい -->
+				<li class="list__item" th:text="${accountName}"></li>
+				<li class="list__item"><a th:href="@{/blog/list}">ブログリスト</a></li>
+				<li class="list__item"><a th:href="@{/account/logout}">ログアウト</a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<div class="blog-list-inner">
+			<!-- 個人紹介 -->
+			<section class="profile">
+				<div class="profile-info">
+					<div class="welcome">
+						<p th:text="${accountName}"></p>
+						<p>Welcome</p>
+					</div>
+					<div class="social">
+						<a href="https://twitter.com" target="_blank">Twitter</a>
+						<a href="https://www.instagram.com" target="_blank">Ins</a>
+					</div>
+				</div>
+			</section>
+			<article>
+				<!-- ブログリスト -->
+				<h2>ブログ一覧</h2>
+				<section class="register-item">
+					<div>
+						<a th:href="@{/blog/register}"> 追加</a>
+					</div>
 
-                </section>
-                <section class="blog-list">
-                    <!-- すべてのブログの表示 -->
-                    <ul class="blog">
-                        <li>
-                            <div class="article-content">
-                                <!-- タイトル -->
-                                <a href=""></a>
-                                <!-- ブログの写真     ＊写真リンクの上書き！-->
-                                <img src="/image/logo.png" alt="">
-                                <!-- ブログ投稿内容 -->
-                                <p></p><br>
-                                <!-- ブログのカテゴリ -->
-                                <p></p>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-        </div>
-    </main>
-    <footer>
-        <div>
-            <small>&copy;2025 RAN individual_blog exercise</small>
-        </div>
-    </footer>
+				</section>
+				<section class="blog-list">
+					<!-- すべてのブログの表示 -->
+					<ul class="blog">
+						<li th:each="blog:${blogList}">
+							<div class="article-content">
+								<a href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
+									<!-- ブログの写真-->
+									<img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="">
+									<!-- タイトル -->
+									<p th:text="${blog.blogTitle}"></p><br>
+									<!-- ブログ投稿内容 -->
+									<p th:text="${blog.article}"></p><br>
+									<!-- ブログのカテゴリ -->
+									<p th:text="${blog.categoryName}"></p>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<div>
+			<small>&copy;2025 RAN individual_blog exercise</small>
+		</div>
+	</footer>
 </body>
 
 </html>

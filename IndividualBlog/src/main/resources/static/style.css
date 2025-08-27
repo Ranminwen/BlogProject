@@ -105,41 +105,109 @@ input[type="text"],input[type="password"]{
 }
 
 /*---ブログリスト画面のデザイン*/
-.blog-list-inner{
-    display: flex;
-    flex-direction: column;
+.blog-list{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+}
+.blog{
+    list-style:none;
+    padding:0;
+    margin:5px 0;
+    width:100%;
+    max-width:600px;
 }
 .profile-info{
-    display: flex;
+    display:flex;
 }
 .welcome{
-    width: 200px;
-    margin-left: 20px;
+    width:200px;
+    margin-left:20px;
 }
 .social{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-article {
-    width: 90%;
-    margin: 0 auto; 
-}
-article h2 {
-    color: #594A4E;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-}
-.register-item{
-    width: 50px;
-    padding: 6px 0;
-    background-color:rgb(225, 180, 219);
-    color: rgb(248, 246, 246);
-    margin-top: 5px;
-    border: 1px solid transparent;
-    /* 角を丸いにする */
-    border-radius: 2px;
+    display:flex;
+    flex-direction:column;
+    text-align:left;
 }
 
+/*追加ボタン*/
+.register-item{
+    background:rgb(248, 221, 245);
+    color:rgb(248,246,246);
+    border-radius:10px;
+    display:inline-block;          
+    min-width:72px;               
+    padding:8px 16px;             
+    margin-top:8px;
+}
+.register-item:hover{
+   /*マウスをここに動かすと*/ 
+    transform:translateY(-4px);
+    box-shadow:0 4px 16px rgba(0,0,0,.12);
+}
+
+/*ブロック一覧*/
+article{
+    width:90%;
+    margin:0 auto;
+}
+article h2{
+    color:#594A4E;
+    font-family:'Courier New',Courier,monospace;
+    text-align:center;
+    font-size:1.5rem;
+    padding:1rem 0;
+}
+
+/* 各ブログ */
+.article-content{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:transform .25s ease,box-shadow .25s ease;
+}
+.article-content:hover{
+    /*マウスをここに動かすと*/ 
+    transform:translateY(-4px);
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+.article-content a{  
+    display:block;
+    color:inherit;
+    text-decoration:none;
+}
+/* ブロック画像部分 */
+.article-content img{ 
+    width:100%;
+    height:auto;
+    max-height:240px;
+    object-fit:cover;
+    display:block;
+}
+
+/* ブロック文字部分 */
+.article-content p{
+    margin:0 0 8px;
+    padding:0 20px;
+    line-height:1.6;
+    word-break:break-word;
+}
+/* タイトル */
+.article-content p:nth-of-type(1){
+    padding-top:16px;
+    font-size:20px;
+    font-weight:600;
+}
+/* 投稿内容 */
+.article-content p:nth-of-type(2){
+    color:#555;
+    font-size:15px;
+}
+/* カテゴリ */
+.article-content p:nth-of-type(3){
+    padding-bottom:16px;
+    font-size:13px;
+    color:#888;
+}

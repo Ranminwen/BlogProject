@@ -9,19 +9,23 @@ import blog.com.models.entity.Blog;
 
 @Repository
 public interface BlogDao extends JpaRepository<Blog, Long> {
-	//保存処理を更新処理　insertとupdate
+	// 保存処理を更新処理 insertとupdate
 	Blog save(Blog blog);
-	
-	//SELECT * FROM blog 
-	//blogを表示できるように
-	List<Blog>findAll();
-	
-	//SELECT * FROM blog WHERE　blog_id　＝?
-	//あるblogを更新できるように blog_idを利用
+
+	// SELECT * FROM blog
+	// blogを表示できるように
+	List<Blog> findAll();
+
+	// SELECT * FROM products WHERE blog_title = ?
+	// blogの登録チェック
+	Blog findByBlogTitle(String blogTitle);
+
+	// SELECT * FROM blog WHERE blog_id ＝?
+	// あるblogを更新できるように blog_idを利用
 	Blog findByBlogId(Long blogId);
-	
-	//DLETE FROM  blog WHERE blog_id = ?
-	//あるblogを更新できるように blog_idを利用
+
+	// DLETE FROM blog WHERE blog_id = ?
+	// あるblogを更新できるように blog_idを利用
 	void deleteByBlogId(Long blogId);
-	
+
 }
