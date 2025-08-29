@@ -30,12 +30,12 @@
 				<form th:action="@{/blog/register/process}" method="post" enctype="multipart/form-data">
 					<div class="register-section-details">
 						<div class="register-section-details_flex">
-							<div>タイトル</div>
-							<input type="text" name="blogTitle" id="blogTitle">
+							<div class="blog_register">タイトル</div>
+							<input class="blogTitle" type="text" name="blogTitle" id="blogTitle">
 						</div>
 						<div class="register-section-details_flex">
-							<div>カテゴリ</div>
-							<select name="categoryName">
+							<div class="blog_register">カテゴリ</div>
+							<select name="categoryName" class="categoryName">
 								<option value=""></option>
 								<option value="中国料理">中国料理</option>
 								<option value="イタリア料理">イタリア料理</option>
@@ -44,18 +44,17 @@
 							</select>
 						</div>
 						<div class="register-section-details_flex">
-							<div>ブログの写真</div>
+							<div class="blog_register">ブログの写真</div>
 							<input type="file" name="blogImage">
 						</div>
 						<div class="register-section-details_flex">
-							<div>ブログの内容</div>
+							<div class="blog_register">ブログの内容</div>
 							<textarea name="article" placeholder="今日は何を作りましたか…"></textarea>
 						</div>
-					</div>
-					<div class="register-section-details">
-						<button class="register">追加</button>
-						<button class="back-btn" onclick="history.back()" type="button">戻る</button>
-					</div>
+						<div class="register-section-details">
+							<button class="register">追加</button>
+							<button class="back-btn" onclick="history.back()" type="button">戻る</button>
+						</div>
 				</form>
 			</section>
 		</div>

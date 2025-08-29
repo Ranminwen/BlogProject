@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>My Blog</title>
+	<link rel="stylesheet" th:href="@{/reset.css}">
 	<link rel="stylesheet" th:href="@{/style.css}">
 </head>
 
@@ -51,7 +52,7 @@
 					<ul class="blog">
 						<li th:each="blog:${blogList}">
 							<div class="article-content">
-								<a href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
+								<a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
 									<!-- ブログの写真-->
 									<img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="">
 									<!-- タイトル -->

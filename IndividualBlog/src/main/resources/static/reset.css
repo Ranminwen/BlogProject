@@ -1,82 +1,101 @@
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
-
-.main-inner{
-   /*画面の真ん中に*/
-    margin: 0 auto; 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-.register-section{
-    /*罫線を引く*/
-    border: 3px solid gainsboro;
-    /*ペイジーに浮いている見えるように*/
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-    /*幅の設定*/
-    width: 500px;
-    border-radius: 8px;
-    /*画面を真ん中に持ってくる*/
-    margin: 0 auto;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-.register-section-details{
-    /*幅の設定*/
-    width: 350px;
-    /*画面の真ん中に*/
-    margin: 0 auto;
-    margin-bottom: 5px;
+body {
+	line-height: 1;
 }
-/*---ブログ追加、編集内容部分のデザイン*/
-.register-section-details_flex{
-   margin-top: 10px;
-   color:rgb(238, 182, 97); 
-   font-family: 'Courier New', Courier, monospace;
-   font-size: 16px;
-   display: flex;
-   align-items: center; 
+ol, ul {
+	list-style: none;
 }
-.register_pass{
-    display: inline-block;
-    width: 120px;
-    color: rgb(238, 182, 97); 
-    text-align: left;
+a{
+	text-decoration: none;
 }
-.register-position{
-margin-top: 20px;
-margin-bottom: 20px;
+blockquote, q {
+	quotes: none;
 }
-.register, .back-btn, .deletion-btn{
-    width: 100px;
-    padding: 6px 0;
-    background-color:antiquewhite;
-    color: rgb(119, 116, 116);
-    margin-top: 20px;
-    border: 1px solid transparent;
-    /* 角を丸いにする */
-    border-radius: 2px;
-
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-select{
-width: 200px;
-  padding:10px 14px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:10px;
-  background:#fafafa;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-input[type="file"]{
-  width: 200px;
-  padding:10px 14px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:10px;
-  background:#fafafa;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-textarea{
-  width: 200px;
-  padding:10px 14px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:10px;
-  background:#fafafa;
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }

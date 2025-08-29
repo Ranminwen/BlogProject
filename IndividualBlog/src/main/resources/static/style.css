@@ -59,6 +59,9 @@ footer{
 .list{
  width: auto;
  margin-left: auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;   
 }
 /*logo内の画像の大きさ*/
 .logo img{
@@ -71,8 +74,11 @@ footer{
     align-content: center; 
     background-color:rgb(225, 180, 219);
     border: 3px dashed rgb(249, 248, 249); 
-    border-radius: 10px;  
+    border-radius: 10px; 
 }
+
+
+
 
 /*ーーーすべての文字のデザインーーー*/
 
@@ -81,11 +87,13 @@ div{
 }
 .list{
     display: flex;
-    flex-direction:row;
+    flex-direction:row;  
 }
 
 h2{
+    margin-top: 20px;
     font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
     color: rgb(238, 182, 97);
     /*文字を真ん中に持ってくる*/
     text-align: center;    
@@ -105,6 +113,10 @@ input[type="text"],input[type="password"]{
 }
 
 /*---ブログリスト画面のデザイン*/
+.blog-list-inner{
+    /*headerに被せないように*/
+    margin-top: 180px;
+}
 .blog-list{
     margin:0;
     height:100vh;
@@ -131,6 +143,7 @@ input[type="text"],input[type="password"]{
     text-align:left;
 }
 
+
 /*追加ボタン*/
 .register-item{
     background:rgb(248, 221, 245);
@@ -148,13 +161,16 @@ input[type="text"],input[type="password"]{
 }
 
 /*ブロック一覧*/
+.profile{
+    font-family:'Courier New', Courier, monospace;
+}
 article{
     width:90%;
     margin:0 auto;
 }
 article h2{
     color:#594A4E;
-    font-family:'Courier New',Courier,monospace;
+    font-family:'Courier New', Courier, monospace;
     text-align:center;
     font-size:1.5rem;
     padding:1rem 0;
@@ -210,4 +226,100 @@ article h2{
     padding-bottom:16px;
     font-size:13px;
     color:#888;
+}
+
+
+
+/*-----------前のreset.css------*/
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+.main-inner{
+   /*画面の真ん中に*/
+    margin: 0 auto; 
+}
+.register-section{
+    /*罫線を引く*/
+    border: 3px solid gainsboro;
+    /*ペイジーに浮いている見えるように*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    /*幅の設定*/
+    width: 500px;
+    border-radius: 8px;
+    /*画面を真ん中に持ってくる*/
+    margin: 0 auto;
+}
+.register-section-details{
+    /*幅の設定*/
+    width: 350px;
+    /*画面の真ん中に*/
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+/*---ブログ追加、編集内容部分のデザイン*/
+.register-section-details_flex{
+   margin-top: 10px;
+   color:rgb(238, 182, 97); 
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 16px;
+   display: flex;
+   align-items: center; 
+}
+.register_pass{
+    display: inline-block;
+    width: 120px;
+    color: rgb(238, 182, 97); 
+    text-align: left;
+}
+.blog_register{
+width: 120px;
+text-align: left;
+}
+.blogTitle{
+    width: 200px;
+}
+.categoryName{
+   width: 230px;
+}
+
+.register-position{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.register, .back-btn, .deletion-btn{
+    width: 100px;
+    padding: 6px 0;
+    background-color:antiquewhite;
+    color: rgb(119, 116, 116);
+    margin-top: 20px;
+    border: 1px solid transparent;
+    /* 角を丸いにする */
+    border-radius: 2px;
+
+}
+select{
+width: 200px;
+  padding:10px 14px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:10px;
+  background:#fafafa;
+}
+input[type="file"]{
+  width: 200px;
+  padding:10px 14px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:10px;
+  background:#fafafa;
+}
+textarea{
+  width: 200px;
+  padding:10px 14px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:10px;
+  background:#fafafa;
 }
