@@ -52,7 +52,7 @@ Spring Bootを使用して開発した料理が好き人に向けるブログウ
 - <img src="/images/bloglist.png">
 - ブログ投稿フォーム
 - <img src="/images/blogregister.png">
-- ブログ編集・削除フォーム
+- ブログ追加フォーム
 - <img src="/images/blogedit.png">
 ---
 
