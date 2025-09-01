@@ -43,18 +43,12 @@ Spring Bootを使用して開発した料理が好き人に向けるブログウ
 ---
 ## 🖼 画面イメージ
 
-> スクリーンショットを `images/` フォルダに追加し、以下に貼り付けてください
 
 - account登録画面
-- <img src="/images/login.png">
 - ログイン画面
-- <img src="/images/login.png">
 - 投稿一覧画面
-- <img src="/images/bloglist.png">
 - ブログ投稿フォーム
-- <img src="/images/blogregister.png">
 - ブログ編集・削除フォーム
-- <img src="/images/blogedit.png">
 ---
 
 ## 🧭 ユースケース図
@@ -62,8 +56,6 @@ Spring Bootを使用して開発した料理が好き人に向けるブログウ
 - アカウントの登録・ログイン
 - ブログ作成・編集・削除
 - ブログ一覧
- <img src="/images/usecase.png">
-> ※ draw.io や StarUML で作成した図を貼り付けてください
 
 ---
 
