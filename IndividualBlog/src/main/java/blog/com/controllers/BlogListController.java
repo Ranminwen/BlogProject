@@ -1,5 +1,7 @@
 package blog.com.controllers;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +16,13 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class BlogListController {
-	@Autowired
-	private HttpSession session;
+	// blogテーブルを操作できるためのblogServiceクラス
 	@Autowired
 	private BlogService blogService;
+
+	// Sessionが使えるように
+	@Autowired
+	private HttpSession session;
 
 	// ブログリスト画面の表示
 	@GetMapping("/blog/list")
@@ -32,6 +37,13 @@ public class BlogListController {
 		} else {
 			// ブログリストを取得
 			List<Blog> bloglist = blogService.selectAllbloglist(account.getAccountId());
+			// ブログが作成された時間順位に並び（ブログのID順位）
+			//上のブログは新しい,下のブログは古い
+			Collections.sort(bloglist, new Comparator<Blog>() {
+				public int compare(Blog b1, Blog b2) {
+					return b2.getBlogId().compareTo(b1.getBlogId());
+				}
+			});
 			model.addAttribute("accountName", account.getAccountName());
 			model.addAttribute("blogList", bloglist);
 			return "blog_list.html";

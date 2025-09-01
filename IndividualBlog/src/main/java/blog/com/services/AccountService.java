@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 import blog.com.models.dao.AccountDao;
 import blog.com.models.entity.Account;
 
-
 @Service
 public class AccountService {
+
 	@Autowired
 	private AccountDao accountDao;
 
@@ -30,11 +30,11 @@ public class AccountService {
 	// その場合は、存在しないnullであることをコントローラクラスに知らせる
 	// そうでない場合ログインしている人に情報をコントローラクラスに知らせる
 	public Account loginCheck(String accountEmail, String password) {
-		Account admin = accountDao.findByAccountEmailAndPassword(accountEmail, password);
-		if (admin == null) {
+		Account account = accountDao.findByAccountEmailAndPassword(accountEmail, password);
+		if (account == null) {
 			return null;
 		} else {
-			return admin;
+			return account;
 		}
 	}
 

@@ -34,7 +34,7 @@ main{
 .login_control_pass{
     display: inline-block;
     width: 120px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Helvetica';
     color: rgb(238, 182, 97); 
     text-align: left;
 }

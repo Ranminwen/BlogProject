@@ -10,6 +10,7 @@ import blog.com.services.AccountService;
 
 @Controller
 public class AccountRergisterController {
+	// accountテーブルを操作できるためのaccountServiceクラス
 	@Autowired
 	private AccountService accountService;
 

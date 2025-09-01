@@ -17,7 +17,7 @@
                 <a href=""><img th:src="@{/img/blog.png}" alt=""></a>
             </div>
                  <ul class="list">
-                    <li class="list__item"><a href="">ログイン</a></li>
+                    <li class="list__item"><a th:href="@{/account/login}">ログイン</a></li>
                 </ul>
         </div>
     </header>
@@ -38,7 +38,7 @@
             </div>
         </form>
             <div class="login_control new_registration">
-                <a class="registration_link" href="">新規登録</a>
+                <a class="registration_link" th:href="@{/account/register}">新規登録</a>
             </div>
         </section>
 

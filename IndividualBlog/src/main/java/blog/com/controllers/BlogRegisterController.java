@@ -20,8 +20,11 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class BlogRegisterController {
+	// blogテーブルを操作できるためのblogServiceクラス
 	@Autowired
 	private BlogService blogService;
+
+	// Sessionが使えるように
 	@Autowired
 	private HttpSession session;
 
@@ -70,9 +73,11 @@ public class BlogRegisterController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			if(blogService.creatBlogs(blogTitle,categoryName, fileName, article, account.getAccountId())){
+			// もし、creatBlogsの結果がtrueの場合は、ブログリストににリダイレクト
+			// そうでない場合、ブログ編集画面にこリダイレクトする
+			if (blogService.creatBlogs(blogTitle, categoryName, fileName, article, account.getAccountId())) {
 				return "redirect:/blog/list";
-			}else {
+			} else {
 				return "blog_register.html";
 			}
 		}

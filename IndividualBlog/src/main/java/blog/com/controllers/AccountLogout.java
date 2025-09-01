@@ -8,16 +8,17 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class AccountLogout {
+	// Sessionが使えるように
 	@Autowired
 	private HttpSession session;
-	
-	//ログアウト処理
+
+	// ログアウト処理
 	@GetMapping("/account/logout")
 	public String accountLogout() {
-		//セクションの無効化
+		// セクションの無効化
 		session.invalidate();
+		// ログイン画面にリダイレクトする
 		return "redirect:/account/login";
 	}
-	
-	
+
 }

@@ -2,7 +2,7 @@ package blog.com.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import blog.com.models.entity.Account;
@@ -11,8 +11,11 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class BlogDelete {
+	// blogテーブルを操作できるためのblogServiceクラス
 	@Autowired
 	private BlogService blogService;
+
+	// Sessionが使えるように
 	@Autowired
 	private HttpSession session;
 
@@ -20,13 +23,20 @@ public class BlogDelete {
 	public String blogDelete(Long blogId) {
 		// セッションからログインしている人の情報をaccountという変数に格納
 		Account account = (Account) session.getAttribute("loginAccountInfo");
-		// もしaccount==nul1 ログイン画面にリダイレクトする
+		// もしaccount==null ログイン画面にリダイレクトする
 		if (account == null) {
 			return "redirect:/account/login";
 		} else {
+			// blogの作者のチャック
+			// もし、blogの作者ではない場合は、
+			if (!blogService.isBlogOwner(account, blogId)) {
+				// ブログの一覧ページにダイレクト
+				return "redirect:/blog/list";
+			}
+			// blogの作者である場合削除
 			// もし、deleteblogの結果がtrue
 			if (blogService.deleteBlog(blogId)) {
-				// 商品の一覧ページにダイレクト
+				// ブログの一覧ページにダイレクト
 				return "redirect:/blog/list";
 			} else {
 				// そうではない場合
@@ -34,5 +44,7 @@ public class BlogDelete {
 				return "redirect:/blog/edit" + blogId;
 			}
 		}
+
 	}
+
 }

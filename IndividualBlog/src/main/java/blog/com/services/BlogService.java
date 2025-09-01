@@ -4,14 +4,16 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
+//import org.springframework.web.bind.annotation.RequestParam;
+//import org.springframework.web.multipart.MultipartFile;
 
 import blog.com.models.dao.BlogDao;
+import blog.com.models.entity.Account;
 import blog.com.models.entity.Blog;
 
 @Service
 public class BlogService {
+
 	@Autowired
 	private BlogDao blogDao;
 
@@ -58,7 +60,6 @@ public class BlogService {
 	// コントロ-ラ-クラスからもらった、blogIdを使って、編集する前の、デ一タを取得
 	// 変更するべきところだけ、セッタ-を使用してデ-タの更新をする。
 	// trueを返す
-
 	public boolean blogUpdate(Long blogId, String blogTitle, String categoryName, String blogImage, String article,
 			Long accountId) {
 		if (blogId == null) {
@@ -82,13 +83,24 @@ public class BlogService {
 	// コントロ-ラ-クラスからもらった、deleteByblogIdを使って商品を消す
 	// trueを返す
 	public boolean deleteBlog(Long blogId) {
-		if(blogId == null) {
+		if (blogId == null) {
 			return false;
-		}else {
+		} else {
 			blogDao.deleteById(blogId);
 			return true;
 		}
 	}
 	
-
+	
+	//blogの作者の確認
+	public boolean isBlogOwner(Account account, Long blogId) {
+        // もし、コントローラーからbologId==nul1だったら,false
+        if (blogId == null) {
+            return false; 
+        }else {
+        	// そうでない場合、コントロ-ラ-クラスからもらった、blogIdを使ってaccountIdを取得
+        	Blog blog = blogDao.findByBlogId(blogId);
+        	return blog.getAccountId().equals(account.getAccountId());   	
+        }
+    }
 }

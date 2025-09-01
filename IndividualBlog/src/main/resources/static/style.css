@@ -91,7 +91,7 @@ div{
 }
 
 h2{
-    margin-top: 20px;
+    margin: 20px auto;
     font-family:'Courier New', Courier, monospace;
     font-size: 30px;
     color: rgb(238, 182, 97);
@@ -100,7 +100,7 @@ h2{
 } 
 li{
     list-style: none;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Helvetica';
 }
 
 /*lableのデザイン*/
@@ -115,7 +115,7 @@ input[type="text"],input[type="password"]{
 /*---ブログリスト画面のデザイン*/
 .blog-list-inner{
     /*headerに被せないように*/
-    margin-top: 180px;
+    margin-top: 200px;
 }
 .blog-list{
     margin:0;
@@ -129,6 +129,9 @@ input[type="text"],input[type="password"]{
     margin:5px 0;
     width:100%;
     max-width:600px;
+}
+.blog li{
+    margin: 20px 0;
 }
 .profile-info{
     display:flex;
@@ -162,7 +165,7 @@ input[type="text"],input[type="password"]{
 
 /*ブロック一覧*/
 .profile{
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Helvetica';
 }
 article{
     width:90%;
@@ -172,7 +175,7 @@ article h2{
     color:#594A4E;
     font-family:'Courier New', Courier, monospace;
     text-align:center;
-    font-size:1.5rem;
+    font-size:2rem;
     padding:1rem 0;
 }
 
@@ -262,7 +265,7 @@ main{
 .register-section-details_flex{
    margin-top: 10px;
    color:rgb(238, 182, 97); 
-   font-family: 'Courier New', Courier, monospace;
+   font-family: 'Helvetica';
    font-size: 16px;
    display: flex;
    align-items: center; 
@@ -293,7 +296,7 @@ margin-bottom: 20px;
     padding: 6px 0;
     background-color:antiquewhite;
     color: rgb(119, 116, 116);
-    margin-top: 20px;
+    margin-top: 15px;
     border: 1px solid transparent;
     /* 角を丸いにする */
     border-radius: 2px;
@@ -322,4 +325,11 @@ textarea{
   border-radius:8px;
   font-size:10px;
   background:#fafafa;
+}
+
+.deletion{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 5px;
 }
