@@ -1,7 +1,7 @@
 
 <div id="top"></div>
 
-# 📘 自作ブログアプリ「BlogPress」
+# 📘 自作ブログウェブサイト「IndividuaBlog」
 
 <p align="center">
   <img src="https://img.shields.io/badge/-Java-007396.svg?logo=java&style=for-the-badge">
@@ -85,7 +85,7 @@ CREATE TABLE blog(
     blog_title VARCHAR(255),
     category_name VARCHAR(255),
     blog_image VARCHAR(255),
-    article VARCHAR(255),
+    article TEXT,
     account_id BIGINT,
     FOREIGN KEY (account_id) REFERENCES account(account_id)
 )
