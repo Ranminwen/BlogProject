@@ -2,6 +2,8 @@ package blog.com.controllerText;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
@@ -50,6 +52,9 @@ public class AccountRergisterControllerText {
 				.param("accountEmail", "test5@email.com")
 				.param("password", "1234abcd");	
 		mockMvc.perform(request).andExpect(view().name("account_login.html"));
+		
+		verify(accountService, times(1)).createAccount("test5","test5@email.com", "1234abcd");
+		
 	}
 	
 	// 新規登録が失敗するかのテスト
