@@ -42,6 +42,7 @@ public class BlogListController {
 			Collections.sort(bloglist, new Comparator<Blog>() {
 				public int compare(Blog b1, Blog b2) {
 					return b2.getBlogId().compareTo(b1.getBlogId());
+					//bloglist.sort((b1, b2) -> b2.getBlogId().compareTo(b1.getBlogId()));
 				}
 			});
 			model.addAttribute("accountName", account.getAccountName());

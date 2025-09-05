@@ -24,7 +24,7 @@ public class AccountLoginController {
 	@GetMapping("/account/login")
 	public String getAccountLoginPage() {
 		return "account_login.html";
-	}
+	} 
 
 	// ログイン処理
 	@PostMapping("/account/login/process")

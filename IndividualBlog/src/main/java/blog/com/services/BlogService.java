@@ -18,9 +18,10 @@ public class BlogService {
 	private BlogDao blogDao;
 
 	// blogのチャック
-	// もしaccount == null 戻り値null
-	// そうではない場合findall内容をBlogListControllerクラスにわたす
+	
 	public List<Blog> selectAllbloglist(Long accountId) {
+		// もしaccount == null 戻り値null
+		// そうではない場合findall内容をBlogListControllerクラスにわたす
 		if (accountId == null) {
 			return null;
 		} else {
